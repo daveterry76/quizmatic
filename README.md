@@ -44,79 +44,79 @@ The application is deployed using a cloud platform (e.g., Vercel, AWS, GCP, Hero
 ### Project Directory Structure
 
 ```- __C:\\Users\\David\\Documents\\resume\\codematic\\quizmatic\\quizmatic\\src__
-   - [App.scss](App.scss)
-   - [App.tsx](App.tsx)
-   - [README.md](README.md)
+   - App.scss
+   - App.tsx
+   - README.md
    - __assets__
      - __icons__
-       - [loading.svg](assets/icons/loading.svg)
-       - [nextIcon.svg](assets/icons/nextIcon.svg)
-       - [restartIcon.svg](assets/icons/restartIcon.svg)
+       - loading.svg
+       - nextIcon.svg
+       - restartIcon.svg
    - __components__
      - __ErrorMessage__
-       - [ErrorMessage.tsx](components/ErrorMessage/ErrorMessage.tsx)
+       - ErrorMessage.tsx
      - __Quiz__
        - __Questions__
-         - [NextButton.tsx](components/Quiz/Questions/NextButton.tsx)
-         - [Questions.tsx](components/Quiz/Questions/Questions.tsx)
-         - [RestartButton.tsx](components/Quiz/Questions/RestartButton.tsx)
+         - NextButton.tsx
+         - Questions.tsx
+         - RestartButton.tsx
      - __Results__
-       - [ResultsText.tsx](components/Results/ResultsText.tsx)
+       - ResultsText.tsx
      - __Selection__
-       - [Header.tsx](components/Selection/Header.tsx)
-       - [ProceedButton.tsx](components/Selection/ProceedButton.tsx)
-       - [SelectCategory.tsx](components/Selection/SelectCategory.tsx)
-       - [SelectDifficulty.tsx](components/Selection/SelectDifficulty.tsx)
-       - [SelectNumberOfQuestions.tsx](components/Selection/SelectNumberOfQuestions.tsx)
+       - Header.tsx
+       - ProceedButton.tsx
+       - SelectCategory.tsx
+       - SelectDifficulty.tsx
+       - SelectNumberOfQuestions.tsx
    - __constants__
-     - [QuestionContextDefaultValue.ts](constants/QuestionContextDefaultValue.ts)
-     - [ResultContextDefaultValue.ts](constants/ResultContextDefaultValue.ts)
-     - [SelectionContextDefaultValues.tsx](constants/SelectionContextDefaultValues.tsx)
-     - [difficultyLevel.ts](constants/difficultyLevel.ts)
-     - [numbers.ts](constants/numbers.ts)
+     - QuestionContextDefaultValue.ts
+     - ResultContextDefaultValue.ts
+     - SelectionContextDefaultValues.tsx
+     - difficultyLevel.ts
+     - numbers.ts
    - __contexts__
-     - [CategoryContext.tsx](contexts/CategoryContext.tsx)
-     - [QuestionsContext.tsx](contexts/QuestionsContext.tsx)
-     - [ResultContext.tsx](contexts/ResultContext.tsx)
-     - [SelectionContext.tsx](contexts/SelectionContext.tsx)
+     - CategoryContext.tsx
+     - QuestionsContext.tsx
+     - ResultContext.tsx
+     - SelectionContext.tsx
    - __hooks__
-     - [useDisplayCategories.ts](hooks/useDisplayCategories.ts)
-     - [useFetchQuestions.ts](hooks/useFetchQuestions.ts)
-   - [index.scss](index.scss)
-   - [index.tsx](index.tsx)
-   - [logo.svg](logo.svg)
+     - useDisplayCategories.ts
+     - useFetchQuestions.ts
+   - index.scss
+   - index.tsx
+   - logo.svg
    - __pages__
      - __Quiz__
-       - [Quiz.tsx](pages/Quiz/Quiz.tsx)
+       - Quiz.tsx
      - __Results__
-       - [Results.tsx](pages/Results/Results.tsx)
+       - Results.tsx
      - __Selection__
-       - [Selection.tsx](pages/Selection/Selection.tsx)
+       - Selection.tsx
    - [react\-app\-env.d.ts](react-app-env.d.ts)
    - [reportWebVitals.ts](reportWebVitals.ts)
    - __services__
-     - [axiosInstance.ts](services/axiosInstance.ts)
-   - [setupTests.ts](setupTests.ts)
+     - axiosInstance.ts
+   - setupTests.ts
    - __styles__
      - __quiz__
-       - [quiz.scss](styles/quiz/quiz.scss)
+       - quiz.scss
      - __results__
-       - [\_heading.scss](styles/results/_heading.scss)
-       - [\_paragraphStyle.scss](styles/results/_paragraphStyle.scss)
+       - \_heading.scss
+       - \_paragraphStyle.scss
      - __selection__
-       - [error\_message.scss](styles/selection/error_message.scss)
-       - [selection.scss](styles/selection/selection.scss)
+       - error\_message.scss
+       - selection.scss
    - __tests__
-     - [NextButton.test.tsx](tests/NextButton.test.tsx)
-     - [ProceedButton.test.tsx](tests/ProceedButton.test.tsx)
-     - [RestartButton.test.tsx](tests/RestartButton.test.tsx)
+     - NextButton.test.tsx
+     - ProceedButton.test.tsx
+     - RestartButton.test.tsx
    - __types__
-     - [CategoriesContextPropTypes.ts](types/CategoriesContextPropTypes.ts)
-     - [QuestionContextPropTypes.ts](types/QuestionContextPropTypes.ts)
-     - [ResultContextPropTypes.ts](types/ResultContextPropTypes.ts)
-     - [SelectContextPropTypes.ts](types/SelectContextPropTypes.ts)
+     - CategoriesContextPropTypes.ts
+     - QuestionContextPropTypes.ts
+     - ResultContextPropTypes.ts
+     - SelectContextPropTypes.ts
    - __utils__
-     - [scoreModulo.ts](utils/scoreModulo.ts)
+     - scoreModulo.ts
 ```
 
 

@@ -1,0 +1,13 @@
+@import '/src/styles/results/paragraphStyle';
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body {
+  @include flexCenter();
+  height: 100vh;
+}

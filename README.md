@@ -1,46 +1,89 @@
-# Getting Started with Create React App
+- __C:\\Users\\David\\Documents\\resume\\codematic\\quizmatic\\quizmatic__
+   - [README.md](README.md)
+   - [babel.config.js](babel.config.js)
+   - [jest.config.js](jest.config.js)
+   - [node\_modules](node_modules)
+   - [package\-lock.json](package-lock.json)
+   - [package.json](package.json)
+   - __public__
+     - [favicon.ico](public/favicon.ico)
+     - [index.html](public/index.html)
+     - [logo192.png](public/logo192.png)
+     - [logo512.png](public/logo512.png)
+     - [manifest.json](public/manifest.json)
+     - [robots.txt](public/robots.txt)
+   - __src__
+     - [App.scss](src/App.scss)
+     - [App.tsx](src/App.tsx)
+     - __assets__
+       - __icons__
+         - [loading.svg](src/assets/icons/loading.svg)
+         - [nextIcon.svg](src/assets/icons/nextIcon.svg)
+         - [restartIcon.svg](src/assets/icons/restartIcon.svg)
+     - __components__
+       - __ErrorMessage__
+         - [ErrorMessage.tsx](src/components/ErrorMessage/ErrorMessage.tsx)
+       - __Quiz__
+         - __Questions__
+           - [NextButton.tsx](src/components/Quiz/Questions/NextButton.tsx)
+           - [Questions.tsx](src/components/Quiz/Questions/Questions.tsx)
+           - [RestartButton.tsx](src/components/Quiz/Questions/RestartButton.tsx)
+       - __Results__
+         - [ResultsText.tsx](src/components/Results/ResultsText.tsx)
+       - __Selection__
+         - [Header.tsx](src/components/Selection/Header.tsx)
+         - [ProceedButton.tsx](src/components/Selection/ProceedButton.tsx)
+         - [SelectCategory.tsx](src/components/Selection/SelectCategory.tsx)
+         - [SelectDifficulty.tsx](src/components/Selection/SelectDifficulty.tsx)
+         - [SelectNumberOfQuestions.tsx](src/components/Selection/SelectNumberOfQuestions.tsx)
+     - __constants__
+       - [QuestionContextDefaultValue.ts](src/constants/QuestionContextDefaultValue.ts)
+       - [ResultContextDefaultValue.ts](src/constants/ResultContextDefaultValue.ts)
+       - [SelectionContextDefaultValues.tsx](src/constants/SelectionContextDefaultValues.tsx)
+       - [difficultyLevel.ts](src/constants/difficultyLevel.ts)
+       - [numbers.ts](src/constants/numbers.ts)
+     - __contexts__
+       - [CategoryContext.tsx](src/contexts/CategoryContext.tsx)
+       - [QuestionsContext.tsx](src/contexts/QuestionsContext.tsx)
+       - [ResultContext.tsx](src/contexts/ResultContext.tsx)
+       - [SelectionContext.tsx](src/contexts/SelectionContext.tsx)
+     - __hooks__
+       - [useDisplayCategories.ts](src/hooks/useDisplayCategories.ts)
+       - [useFetchQuestions.ts](src/hooks/useFetchQuestions.ts)
+     - [index.scss](src/index.scss)
+     - [index.tsx](src/index.tsx)
+     - [logo.svg](src/logo.svg)
+     - __pages__
+       - __Quiz__
+         - [Quiz.tsx](src/pages/Quiz/Quiz.tsx)
+       - __Results__
+         - [Results.tsx](src/pages/Results/Results.tsx)
+       - __Selection__
+         - [Selection.tsx](src/pages/Selection/Selection.tsx)
+     - [react\-app\-env.d.ts](src/react-app-env.d.ts)
+     - [reportWebVitals.ts](src/reportWebVitals.ts)
+     - __services__
+       - [axiosInstance.ts](src/services/axiosInstance.ts)
+     - [setupTests.ts](src/setupTests.ts)
+     - __styles__
+       - __quiz__
+         - [quiz.scss](src/styles/quiz/quiz.scss)
+       - __results__
+         - [\_heading.scss](src/styles/results/_heading.scss)
+         - [\_paragraphStyle.scss](src/styles/results/_paragraphStyle.scss)
+       - __selection__
+         - [error\_message.scss](src/styles/selection/error_message.scss)
+         - [selection.scss](src/styles/selection/selection.scss)
+     - __tests__
+       - [NextButton.test.tsx](src/tests/NextButton.test.tsx)
+       - [ProceedButton.test.tsx](src/tests/ProceedButton.test.tsx)
+       - [RestartButton.test.tsx](src/tests/RestartButton.test.tsx)
+     - __types__
+       - [CategoriesContextPropTypes.ts](src/types/CategoriesContextPropTypes.ts)
+       - [QuestionContextPropTypes.ts](src/types/QuestionContextPropTypes.ts)
+       - [ResultContextPropTypes.ts](src/types/ResultContextPropTypes.ts)
+       - [SelectContextPropTypes.ts](src/types/SelectContextPropTypes.ts)
+     - __utils__
+       - [scoreModulo.ts](src/utils/scoreModulo.ts)
+   - [tsconfig.json](tsconfig.json)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

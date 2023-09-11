@@ -76,7 +76,7 @@ const Questions = () => {
           thickness={1}
         />
         <h3>No questions for now.</h3>
-        <Link to='/'>Return to home page</Link>
+        <Link to='/'>Return to select page</Link>
       </>}
     </div>
   )

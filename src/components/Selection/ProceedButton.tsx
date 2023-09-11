@@ -19,6 +19,7 @@ const ProceedButton = () => {
         setError('Please select all the fields!');
       } else {
         fetchQuestions();
+        setError(null);
         navigate('/quiz');
       }
     }

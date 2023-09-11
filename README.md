@@ -36,12 +36,9 @@ The application fetches questions from the Trivia API using HTTP requests. Speci
 #### Styling 
 In harmony with frontend best practices, SASS (A CSS Preprocessor) is used to define the styles in the Quizmatic application. This ensures modularization and maintainability of the code.
 
-### Types
+#### Types
 To ensure type safety in the Quizmatic application, types and interfaces are defined and assigned to various components in the application.
-
-### Deployment
-
-The application is deployed using a cloud platform (e.g., Vercel, AWS, GCP, Heroku, Digital Ocean) to make it publicly accessible.
+ 
 
 ### Project Directory Structure
 

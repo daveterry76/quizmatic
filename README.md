@@ -4,6 +4,8 @@
 
 This documentation provides an overview of the high-level architecture of the Quizmatic application developed using React. Quizmatic is a web-based platform designed to provide users with a dynamic quiz experience. It utilizes the Open Trivia Database API to fetch questions based on user-selected criteria including category, difficulty level, the number of questions and displays the user’s score at the end of the quiz.
 
+![](https://gifyu.com/image/S4LMK)
+
 
 ## Architecture
 

@@ -8,7 +8,7 @@ import '../../../styles/quiz/quiz.scss';
 
 const RestartButton = () => {
 
-  const { setActiveQuestion } = useContext<QuestionContextProps>(QuestionContext);
+  const { questions, setActiveQuestion } = useContext<QuestionContextProps>(QuestionContext);
   const { score, setScore } = useContext<ResultContextPropTypes>(ResultContext);
 
 
@@ -24,6 +24,7 @@ const RestartButton = () => {
           className='action-btn'
           onClick={handleRestart}
           data-testid="restartBtn"
+          disabled={questions ? false : true}
         >
             Restart
             <RestartIcon />

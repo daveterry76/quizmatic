@@ -12,14 +12,11 @@ const ProceedButton = () => {
     const { fetchQuestions } = useFetchQuestions();
     const { selectedNumber, selectedDifficulty, setError } = useContext<SelectContextProps>(SelectionContext);
     const { category } = useContext<CategoryContextProps>(CategoryContext);
-    const { error } = useContext<SelectContextProps>(SelectionContext);
 
 
     const handleButtonClicked = () => {
       if (!category || !selectedNumber || !selectedDifficulty) {
         setError('Please select all the fields!');
-      } else if (error) {
-        setError(error);
       } else {
         fetchQuestions();
         navigate('/quiz');

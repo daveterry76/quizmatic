@@ -1,89 +1,167 @@
-- __C:\\Users\\David\\Documents\\resume\\codematic\\quizmatic\\quizmatic__
+# Quizmatic Documentation
+
+## Overview
+
+This documentation provides an overview of the high-level architecture of the Quizmatic application developed using React. Quizmatic is a web-based platform designed to provide users with a dynamic quiz experience. It utilizes the Open Trivia Database API to fetch questions based on user-selected criteria including category, difficulty level, the number of questions and displays the user’s score at the end of the quiz.
+
+
+## Architecture
+
+### Frontend
+The frontend of the Quiz application is built using React and TypeScript, following best practices for code structure and component design.
+
+#### Components
+1. **App**: The root component of the application. It manages the application's state and routing, including selected quiz parameters, questions, and the user’s score. 
+
+2. **Selection**: This component allows users to select a quiz category, difficulty level (easy, medium, hardd), and the number of questions (max 10) they want to answer.
+
+3. **Quiz**: Renders a single quiz question with multiple-choice options. Also displays the restart and next buttons to navigate between pages.
+
+4. **Results**:  The application tracks the user's answers and calculates their score based on correct and incorrect responses. The score is updated in real-time as the user progresses through the quiz. Displays the user’s final score at the end of the quiz and a congratulatory message.
+
+
+#### State Management
+- React `useState` and `useContext` hooks are used for managing the application's state, including user inputs and API responses. This Context Providers wrap the main App component.
+
+#### Hooks and API Integration
+
+The application fetches questions from the Trivia API using HTTP requests. Specialized functions are built to handle the fetching of questions and displaying question categories in the Quiz application. AxiosInstance is used for this purpose. The API endpoints used include:
+
+- **Categories Endpoint:** `https://opentdb.com/api_category.php` to retrieve supported categories.
+
+- **Quiz Questions Endpoint:** `https://opentdb.com/api.php` to fetch quiz questions based on the selected category, difficulty level, and the number of questions.
+
+#### Styling 
+In harmony with frontend best practices, SASS (A CSS Preprocessor) is used to define the styles in the Quizmatic application. This ensures modularization and maintainability of the code.
+
+### Types
+To ensure type safety in the Quizmatic application, types and interfaces are defined and assigned to various components in the application.
+
+### Deployment
+
+The application is deployed using a cloud platform (e.g., Vercel, AWS, GCP, Heroku, Digital Ocean) to make it publicly accessible.
+
+### Project Directory Structure
+
+```- __C:\\Users\\David\\Documents\\resume\\codematic\\quizmatic\\quizmatic\\src__
+   - [App.scss](App.scss)
+   - [App.tsx](App.tsx)
    - [README.md](README.md)
-   - [babel.config.js](babel.config.js)
-   - [jest.config.js](jest.config.js)
-   - [node\_modules](node_modules)
-   - [package\-lock.json](package-lock.json)
-   - [package.json](package.json)
-   - __public__
-     - [favicon.ico](public/favicon.ico)
-     - [index.html](public/index.html)
-     - [logo192.png](public/logo192.png)
-     - [logo512.png](public/logo512.png)
-     - [manifest.json](public/manifest.json)
-     - [robots.txt](public/robots.txt)
-   - __src__
-     - [App.scss](src/App.scss)
-     - [App.tsx](src/App.tsx)
-     - __assets__
-       - __icons__
-         - [loading.svg](src/assets/icons/loading.svg)
-         - [nextIcon.svg](src/assets/icons/nextIcon.svg)
-         - [restartIcon.svg](src/assets/icons/restartIcon.svg)
-     - __components__
-       - __ErrorMessage__
-         - [ErrorMessage.tsx](src/components/ErrorMessage/ErrorMessage.tsx)
-       - __Quiz__
-         - __Questions__
-           - [NextButton.tsx](src/components/Quiz/Questions/NextButton.tsx)
-           - [Questions.tsx](src/components/Quiz/Questions/Questions.tsx)
-           - [RestartButton.tsx](src/components/Quiz/Questions/RestartButton.tsx)
-       - __Results__
-         - [ResultsText.tsx](src/components/Results/ResultsText.tsx)
-       - __Selection__
-         - [Header.tsx](src/components/Selection/Header.tsx)
-         - [ProceedButton.tsx](src/components/Selection/ProceedButton.tsx)
-         - [SelectCategory.tsx](src/components/Selection/SelectCategory.tsx)
-         - [SelectDifficulty.tsx](src/components/Selection/SelectDifficulty.tsx)
-         - [SelectNumberOfQuestions.tsx](src/components/Selection/SelectNumberOfQuestions.tsx)
-     - __constants__
-       - [QuestionContextDefaultValue.ts](src/constants/QuestionContextDefaultValue.ts)
-       - [ResultContextDefaultValue.ts](src/constants/ResultContextDefaultValue.ts)
-       - [SelectionContextDefaultValues.tsx](src/constants/SelectionContextDefaultValues.tsx)
-       - [difficultyLevel.ts](src/constants/difficultyLevel.ts)
-       - [numbers.ts](src/constants/numbers.ts)
-     - __contexts__
-       - [CategoryContext.tsx](src/contexts/CategoryContext.tsx)
-       - [QuestionsContext.tsx](src/contexts/QuestionsContext.tsx)
-       - [ResultContext.tsx](src/contexts/ResultContext.tsx)
-       - [SelectionContext.tsx](src/contexts/SelectionContext.tsx)
-     - __hooks__
-       - [useDisplayCategories.ts](src/hooks/useDisplayCategories.ts)
-       - [useFetchQuestions.ts](src/hooks/useFetchQuestions.ts)
-     - [index.scss](src/index.scss)
-     - [index.tsx](src/index.tsx)
-     - [logo.svg](src/logo.svg)
-     - __pages__
-       - __Quiz__
-         - [Quiz.tsx](src/pages/Quiz/Quiz.tsx)
-       - __Results__
-         - [Results.tsx](src/pages/Results/Results.tsx)
-       - __Selection__
-         - [Selection.tsx](src/pages/Selection/Selection.tsx)
-     - [react\-app\-env.d.ts](src/react-app-env.d.ts)
-     - [reportWebVitals.ts](src/reportWebVitals.ts)
-     - __services__
-       - [axiosInstance.ts](src/services/axiosInstance.ts)
-     - [setupTests.ts](src/setupTests.ts)
-     - __styles__
-       - __quiz__
-         - [quiz.scss](src/styles/quiz/quiz.scss)
-       - __results__
-         - [\_heading.scss](src/styles/results/_heading.scss)
-         - [\_paragraphStyle.scss](src/styles/results/_paragraphStyle.scss)
-       - __selection__
-         - [error\_message.scss](src/styles/selection/error_message.scss)
-         - [selection.scss](src/styles/selection/selection.scss)
-     - __tests__
-       - [NextButton.test.tsx](src/tests/NextButton.test.tsx)
-       - [ProceedButton.test.tsx](src/tests/ProceedButton.test.tsx)
-       - [RestartButton.test.tsx](src/tests/RestartButton.test.tsx)
-     - __types__
-       - [CategoriesContextPropTypes.ts](src/types/CategoriesContextPropTypes.ts)
-       - [QuestionContextPropTypes.ts](src/types/QuestionContextPropTypes.ts)
-       - [ResultContextPropTypes.ts](src/types/ResultContextPropTypes.ts)
-       - [SelectContextPropTypes.ts](src/types/SelectContextPropTypes.ts)
-     - __utils__
-       - [scoreModulo.ts](src/utils/scoreModulo.ts)
-   - [tsconfig.json](tsconfig.json)
+   - __assets__
+     - __icons__
+       - [loading.svg](assets/icons/loading.svg)
+       - [nextIcon.svg](assets/icons/nextIcon.svg)
+       - [restartIcon.svg](assets/icons/restartIcon.svg)
+   - __components__
+     - __ErrorMessage__
+       - [ErrorMessage.tsx](components/ErrorMessage/ErrorMessage.tsx)
+     - __Quiz__
+       - __Questions__
+         - [NextButton.tsx](components/Quiz/Questions/NextButton.tsx)
+         - [Questions.tsx](components/Quiz/Questions/Questions.tsx)
+         - [RestartButton.tsx](components/Quiz/Questions/RestartButton.tsx)
+     - __Results__
+       - [ResultsText.tsx](components/Results/ResultsText.tsx)
+     - __Selection__
+       - [Header.tsx](components/Selection/Header.tsx)
+       - [ProceedButton.tsx](components/Selection/ProceedButton.tsx)
+       - [SelectCategory.tsx](components/Selection/SelectCategory.tsx)
+       - [SelectDifficulty.tsx](components/Selection/SelectDifficulty.tsx)
+       - [SelectNumberOfQuestions.tsx](components/Selection/SelectNumberOfQuestions.tsx)
+   - __constants__
+     - [QuestionContextDefaultValue.ts](constants/QuestionContextDefaultValue.ts)
+     - [ResultContextDefaultValue.ts](constants/ResultContextDefaultValue.ts)
+     - [SelectionContextDefaultValues.tsx](constants/SelectionContextDefaultValues.tsx)
+     - [difficultyLevel.ts](constants/difficultyLevel.ts)
+     - [numbers.ts](constants/numbers.ts)
+   - __contexts__
+     - [CategoryContext.tsx](contexts/CategoryContext.tsx)
+     - [QuestionsContext.tsx](contexts/QuestionsContext.tsx)
+     - [ResultContext.tsx](contexts/ResultContext.tsx)
+     - [SelectionContext.tsx](contexts/SelectionContext.tsx)
+   - __hooks__
+     - [useDisplayCategories.ts](hooks/useDisplayCategories.ts)
+     - [useFetchQuestions.ts](hooks/useFetchQuestions.ts)
+   - [index.scss](index.scss)
+   - [index.tsx](index.tsx)
+   - [logo.svg](logo.svg)
+   - __pages__
+     - __Quiz__
+       - [Quiz.tsx](pages/Quiz/Quiz.tsx)
+     - __Results__
+       - [Results.tsx](pages/Results/Results.tsx)
+     - __Selection__
+       - [Selection.tsx](pages/Selection/Selection.tsx)
+   - [react\-app\-env.d.ts](react-app-env.d.ts)
+   - [reportWebVitals.ts](reportWebVitals.ts)
+   - __services__
+     - [axiosInstance.ts](services/axiosInstance.ts)
+   - [setupTests.ts](setupTests.ts)
+   - __styles__
+     - __quiz__
+       - [quiz.scss](styles/quiz/quiz.scss)
+     - __results__
+       - [\_heading.scss](styles/results/_heading.scss)
+       - [\_paragraphStyle.scss](styles/results/_paragraphStyle.scss)
+     - __selection__
+       - [error\_message.scss](styles/selection/error_message.scss)
+       - [selection.scss](styles/selection/selection.scss)
+   - __tests__
+     - [NextButton.test.tsx](tests/NextButton.test.tsx)
+     - [ProceedButton.test.tsx](tests/ProceedButton.test.tsx)
+     - [RestartButton.test.tsx](tests/RestartButton.test.tsx)
+   - __types__
+     - [CategoriesContextPropTypes.ts](types/CategoriesContextPropTypes.ts)
+     - [QuestionContextPropTypes.ts](types/QuestionContextPropTypes.ts)
+     - [ResultContextPropTypes.ts](types/ResultContextPropTypes.ts)
+     - [SelectContextPropTypes.ts](types/SelectContextPropTypes.ts)
+   - __utils__
+     - [scoreModulo.ts](utils/scoreModulo.ts)
+```
+
+
+## User Experience
+
+The user interface and design of the Quiz application are designed to provide a pleasant and intuitive user experience. This includes responsive design for different screen sizes and thoughtful use of colors, typography, and user interactions.
+
+## Error Handling
+
+The application is equipped with appropriate error handling mechanisms. It displays user-friendly error messages in case of network issues, invalid inputs, or any other errors that may occur during quiz interaction.
+
+## Testing
+Unit tests were written for certain key elements to ensure maintainability of the application. Jest and React Testing Library were utilized for this purpose.
+
+## Deployment
+
+The Quiz application is deployed on [Vercel](https://www.vercel.com/) at the following URL: [https://quizmatic.vercel.app](https://quizmatic.vercel.app)
+
+## Repository
+
+The code for the Quiz application is hosted on GitHub in the following public repository: [https://github.com/daveterry76/quizmatic](https://github.com/daveterry76/quizmatic)
+
+
+## Future Improvements:
+
+Potential enhancements for the application include:
+- Implementing user authentication for personalized experiences.
+- Adding a timer feature to create time-bound quizzes.
+- Enhancing the user interface for improved accessibility and aesthetics.
+
+## Collaboration
+
+I welcome collaboration and contributions from the developer community to enhance and improve this Quiz application further. If you have ideas for new features, bug fixes, or any other improvements, please feel free to fork this repository and submit pull requests. I appreciate your valuable input and will review and merge well-documented and well-tested contributions that align with the project's goals and best practices.
+To contribute, follow these steps:
+1. Fork this repository to your own GitHub account.
+2. Create a new branch for your feature or bug fix.
+3. Implement your changes and ensure they are well-documented.
+4. Run tests to ensure your changes don't introduce regressions.
+5. Submit a pull request with a clear description of your changes and why they are beneficial.
+
+Let's collaborate to make this Quiz application even better for users and developers alike.
+
+Feel free to reach out if you have any questions or need assistance with the contribution process. Thank you for your interest in improving this project!
+
+
+
+
 

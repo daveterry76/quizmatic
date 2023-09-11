@@ -4,7 +4,7 @@
 
 This documentation provides an overview of the high-level architecture of the Quizmatic application developed using React. Quizmatic is a web-based platform designed to provide users with a dynamic quiz experience. It utilizes the Open Trivia Database API to fetch questions based on user-selected criteria including category, difficulty level, the number of questions and displays the user’s score at the end of the quiz.
 
-![](https://s11.gifyu.com/images/S4LMK.gif)
+![](https://s11.gifyu.com/images/S4LME.gif)
 
 
 ## Architecture
@@ -142,7 +142,7 @@ The Quiz application is deployed on [Vercel](https://www.vercel.com/) at the fol
 The code for the Quiz application is hosted on GitHub in the following public repository: [https://github.com/daveterry76/quizmatic](https://github.com/daveterry76/quizmatic)
 
 
-## Future Improvements:
+## Future Improvements
 
 Potential enhancements for the application include:
 - Implementing user authentication for personalized experiences.
